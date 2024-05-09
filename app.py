@@ -1,13 +1,13 @@
-from flask import Flask, request, jsonify
-import requests
+from flask import Flask, request, jsonify #flaskpackages
+import requests #uliize requests package 
 
 app = Flask(__name__)
 
 # Dummy database to store trades
 trades = []
 
-# Replace 'YOUR_API_KEY' with your actual Alpha Vantage API key
-API_KEY = '0C5BQZJGUFPO1Q45'  # This is the example key; replace it with your own.
+# Alphavantage API key displayed here, no concern with exposure to public
+API_KEY = '0C5BQZJGUFPO1Q45' #timeseriesweeklyaboutobecalled
 STOCK_API_URL = 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol={symbol}&apikey={apikey}'
 
 @app.route('/price/<symbol>')
